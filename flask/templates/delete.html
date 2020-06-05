@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <form method="POST" action="/countries/delete/country">
+        <div class="form-group row">
+            <label for="ddlCountry" class="col-md-2" style="padding-top: 6px;">Select country</label>
+            <div class="col-md-3">
+                <select class="form-control" name="country" id="ddlCountry">
+                    {% for country in countries_data %}
+                    <option value="{{country}}">{{country}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" id="submitCountry">Delete Country</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

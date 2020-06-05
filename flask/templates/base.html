@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- <a class="navbar-brand" href="#">Data Visualisation</a> -->
+                <img src="{{ url_for('static', filename='img/project1_data_visualisation_logo.jpg') }}" alt="..."
+                    style="width: 10rem; height:5rem; padding-right: 6px;">
+            </div>
+            <ul class="nav navbar-nav">
+                <li {% if page == 'home' %}class="current" {% endif %}><a class="txtcolor" href="/">Home</a></li>
+                <li {% if page == 'inspiration' %}class="current" {% endif %}><a class="txtcolor"
+                        href="inspiration">Inspiration</a></li>
+                <li {% if page == 'data' %}class="current" {% endif %}><a class="txtcolor" href="data">Data</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    <div class="container">
+        <h3>Data Visualisation</h3>
+        <p>It's about data visualisation of different types of data set</p>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>

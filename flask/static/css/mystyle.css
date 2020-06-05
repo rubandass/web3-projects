@@ -1,0 +1,29 @@
+.nav .current{
+	background-color:  rgb(107, 103, 103) !important;
+	
+}
+
+.nav .current .txtcolor{
+	color: rgb(235, 212, 223) !important;
+}
+
+.toolTip {
+	position: absolute;
+	display: none;
+	min-width: 80px;
+	height: auto;
+	background: none repeat scroll 0 0 #ffffff;
+	border: 1px solid #6F257F;
+	padding: 14px;
+	text-align: center;
+}
+
+.grid line {
+	stroke: rgb(175, 175, 175);
+	stroke-opacity: 0.5;
+	shape-rendering: crispEdges;
+}
+
+#svgcontainer{
+	border: 1px solid lightgray;
+}
