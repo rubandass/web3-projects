@@ -3,7 +3,6 @@ from flask import Flask, render_template, redirect, url_for
 import json
 from collections import namedtuple
 from pymongo import MongoClient
-import pandas as pd
 import os
 import csv
 from flask import jsonify
